@@ -1,0 +1,34 @@
+TTTTTTTTTTTTTTTTTTTTTTTTTT
+TT         T         TTTTT
+TTT  TTTT  TT  TTTT   TTTT
+TTT  TTTTTTTT  TTTT   TTTT
+TTT      TTTT       TTTTTT
+XXX  XXXXXXXX  XXX   XXXXX
+XXX  XXXX  XX  XXXX   XXXX
+XX         X    XXXX    XX
+XXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+### Actualización Paquetes SO ###
+
+1. Actualizar los paquetes del SO usando el comando: sudo apt-get update
+2. Mejorar los paquetes que se puedan mejorar con el comando: sudo apt-get upgrade
+
+## Instalación Servidor MySQL ##
+
+3. Instalar el servidor MySQL usando el comando: sudo apt-get install mysql-server
+iniciar el servicio con el comando: sudo mysql
+4. Crear los usuarios necesarios, para acceder a la base de datos remotamente, usando el comando CREATE USER nombreUsuario@IPmaquinavirtual IDENTIFIED BY contraseña;
+5. Otorgar los privilegios necesarios para el usuario usando el comando: GRANT PRIVILEGIO ON base_de_datos.nombre_de_tabla TO nombreUsuario@IPmaquinavirtual;
+- ALL PRIVILEGES: Acceso completo a una base de datos designada (si no se selecciona ninguna base de datos, acceso global a todo el sistema)
+- CREATE: Permite crear nuevas tablas o bases de datos.
+- DROP: Permite eliminar tablas o bases de datos.
+- DELETE: Permite eliminar filas de las tablas.
+- INSERT: Permite insertar filas en las tablas.
+- SELECT: Les permite usar el comando SELECT para leer las bases de datos.
+- UPDATE: Permite actualizar las filas de las tablas.
+- GRANT OPTION: Permite otorgar o eliminar privilegios de otros usuarios.
+6. Validar la creación del usuario y el método de autenticación usando el comando: SELECT user,authentication_string,plugin,host FROM mysql.user;
+7. Validar los privilegios del usuario usando el comando: SHOW GRANTS FOR 'nombreUsuario'@'IPmaquinavirtual';
+8. De ser necesario, revocar privilegios innecesarios o inseguros con el comando: REVOKE privilegio ON base_de_datos.nombre_de_tabla FROM nombreUsuario@IPmaquinavirtual;
+9. Salir de MySQL usando el comando: exit

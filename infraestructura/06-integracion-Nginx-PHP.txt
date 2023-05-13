@@ -1,0 +1,64 @@
+TTTTTTTTTTTTTTTTTTTTTTTTTT
+TT         T         TTTTT
+TTT  TTTT  TT  TTTT   TTTT
+TTT  TTTTTTTT  TTTT   TTTT
+TTT      TTTT       TTTTTT
+XXX  XXXXXXXX  XXX   XXXXX
+XXX  XXXX  XX  XXXX   XXXX
+XX         X    XXXX    XX
+XXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+### Actualización Paquetes SO ###
+
+1. Actualizar los paquetes del SO usando el comando: sudo apt-get update
+2. Mejorar los paquetes que se puedan mejorar con el comando: sudo apt-get upgrade
+
+### Integrar Nginx y PHP ###
+
+3. Es necesario configurar algunos componentes para indicarle a Nginx que utilice PHP para mostrar el contenido, esto se hace a nivel de bloque de servidor (archivos parecidos a los hosts virtuales de Apache).
+Para crear un nuevo archivo de configuración ingresar el comando: sudo nano /etc/nginx/sites-available/nombreArchivo
+El comando nano abre un archivo existente, y si no lo existe lo crea, si se dispone de un dominio ya comprado, el archivo se debería llamar igual.
+4. Una vez en el editor, ingresar el siguiente contenido:
+
+server {
+        listen 80;
+        root /var/www/html;
+        index index.php index.html index.htm index.nginx-debian.html;
+        server_name dominio;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+
+        location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+                fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+        }
+
+        location ~ /\.ht {
+                deny all;
+        }
+}
+
+#Explicación línea por línea:
+# listen — Define en qué puerto escuchará Nginx. En este caso, escuchará en el puerto 80, el puerto predeterminado para HTTP.
+# root: define la raíz del documento donde se almacenan los archivos servidos por el sitio web.
+# index: configura Nginx para priorizar el servicio de archivos llamados index.php cuando se solicita un archivo de index si está disponible.
+# server_name: define qué bloque debe usarse para solicitudes al servidor. Apuntar esta directiva al nombre de dominio de su servidor o dirección IP pública.
+# location /: el primer bloque de ubicación incluye una directiva try_files, que verifica la existencia de archivos que coincidan con una solicitud de URI. Si Nginx no puede encontrar el archivo apropiado, devolverá un error 404.
+# location ~ \.php$: este bloque de ubicación maneja el procesamiento de PHP al señalarle a Nginx el archivo de configuración fastcgi-php.conf y el archivo php7.2-fpm.sock, que declara qué socket está asociado con php-fpm.
+# location ~ /\.ht: el último bloque de ubicación se ocupa de los archivos .htaccess, que Nginx no procesa. Al agregar la directiva denegar todo, si algún archivo .htaccess llega a la raíz del documento, no será servido a los visitantes.
+
+Salir del editor presionando las teclas Ctrl + X, confirmar pulsando la tecla Y, y Enter para guardar los cambios.
+
+5. Habilitar el nuevo bloque creando un enlace simbólico al archivo de configuración creado usando el comando: sudo ln -s /etc/nginx/sites-available/nombreArchivo /etc/nginx/sites-enabled/
+Deshabiitar el bloque por defecto con el comando: sudo unlink /etc/nginx/sites-enabled/default
+6. Probar el archivo de configuración con el comando: sudo nginx -t
+Recargar el servicio de Nginx con el comando: sudo systemctl reload nginx
+7. crear un archivo PHP para probar la configuración usando el comando: sudo nano /var/www/html/info.php
+Una vez en el editor, ingresar el siguiente contenido: <?php phpinfo();?>
+Salir del editor presionando las teclas Ctrl + X, confirmar pulsando la tecla Y, y Enter para guardar los cambios.
+8. Visitar el script recién creado ingresando en un navegador la dirección del sitio y la ruta /info.php, completo debería ser algo similar a: http://123.456.7.8/info.php
+Si carga el contenido de la función INfo, el servidor está configurado correctamente.
+9. para evitar que algún atacante obtenga información sobre el servidos, borrar el archivo de info con el comando: sudo rm /var/www/html/info.php

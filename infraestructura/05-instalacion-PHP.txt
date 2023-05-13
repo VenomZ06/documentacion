@@ -1,0 +1,20 @@
+TTTTTTTTTTTTTTTTTTTTTTTTTT
+TT         T         TTTTT
+TTT  TTTT  TT  TTTT   TTTT
+TTT  TTTTTTTT  TTTT   TTTT
+TTT      TTTT       TTTTTT
+XXX  XXXXXXXX  XXX   XXXXX
+XXX  XXXX  XX  XXXX   XXXX
+XX         X    XXXX    XX
+XXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+### Actualización Paquetes SO ###
+
+1. Actualizar los paquetes del SO usando el comando: sudo apt-get update
+2. Mejorar los paquetes que se puedan mejorar con el comando: sudo apt-get upgrade
+
+## Instalación Servidor PHP ##
+
+3. Instalar el repositorio universo de ubuntu, el cual incluye software libre y de código abierto mantenido por la comunidad de Ubuntu, usando el comando: sudo add-apt-repository universe
+4. Instalar el módulo php-fpm y el módulo php-mysql el cuál le permite a PHP comunicarse con mySQL, usando el comando: sudo apt install php-fpm php-mysql.
