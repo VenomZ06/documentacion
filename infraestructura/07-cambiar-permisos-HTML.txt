@@ -1,0 +1,18 @@
+TTTTTTTTTTTTTTTTTTTTTTTTTT
+TT         T         TTTTT
+TTT  TTTT  TT  TTTT   TTTT
+TTT  TTTTTTTT  TTTT   TTTT
+TTT      TTTT       TTTTTT
+XXX  XXXXXXXX  XXX   XXXXX
+XXX  XXXX  XX  XXXX   XXXX
+XX         X    XXXX    XX
+XXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+## Cambiar permisos carpeta /html ##
+
+1. Asegurar de que el nombre de usuario ubuntu esté incluido en el grupo www-data, usando el comando: grep ^www-data /etc/group
+2. Agregar el nombre de usuario al grupo www-data: sudo adduser ubuntu www-data
+Volver a ingresar el comando del punto anterior para verificar
+3. Cambiar la propiedad de /var/www al nombre del usuario: sudo chown ubuntu:www-data -R /var/www
+4. Cambiar el permiso a 755 (rwxr-xr-x) - No es recomendado cambiar el permiso a 777 por razones de seguridad - Usando el comando: sudo chmod 755 -R /var/www

@@ -1,0 +1,22 @@
+TTTTTTTTTTTTTTTTTTTTTTTTTT
+TT         T         TTTTT
+TTT  TTTT  TT  TTTT   TTTT
+TTT  TTTTTTTT  TTTT   TTTT
+TTT      TTTT       TTTTTT
+XXX  XXXXXXXX  XXX   XXXXX
+XXX  XXXX  XX  XXXX   XXXX
+XX         X    XXXX    XX
+XXXXXXXXXXXXXXXXXXXXXXXXXX
+
+### Configuración clientes SSH y SFTP ###
+
+1. Ingresar a la página https://www.putty.org/ y buscar el enlace Download PuTTY
+2. Ejecutar el archivo que se descarga y seguir los pasos del asistente, si se requiere una instalación típica o no se desean seleccionar componenetes; proceder a instalar con las opciones por defecto, de lo contrario personalizar las opciones según la necesidad.
+3. Lanzar PuTTY, en el listado de la izquierda de la aplicación bajo el menú de conexión, expandir las opciones SSH > Auth y seleccionar la opción Credenciales.
+4. En la interfaz de la aplicación que se despliega, pulsar el botón Buscar... y navegar hasta la ubicación de la llave pública .ppk de la instancia, seleccionarla y pulsar Abrir, En la parte izquierda, regresar a la parte superior y seleccionar el menú Sesión.
+5. En la pantalla que se despliega,  en el hostname ingresar la dirección IP de la instancia, la siguiente parte es opcional, y es para evitar ingresar la información cada vez que se desee conectar a la instancia: En el cuadro de texto ubicado debajo de Sesiones guardadas, escribir un nombre para la conexión y pulsar el botón Guardar.
+6. Pulsar el botón de Abrir, y en la ventana de terminal que se despliega ingresar el nombre de usuario que va a acceder a la instancia. La primera vez que se ejecuta, el usuario por defecto es ubuntu, seguido de la tecla Enter.
+7. Una vez se visualice la interfaz que tiene apariencia de línea de comandos, minimizar la ventana, e  ingresar a la página https://winscp.net/, pulsar el botón Download Now y nuevamente pulsar el botón Download WinSCP.
+8. Ejecutar el archivo descargado y seguir los pasos para instalarlo.
+9. En algún punto de la instalación el asistente indicará que existe una conexión coonfigurada en PuTTY y que si se desea importar la configuración, pulsar aceptar.
+10. Una vez configurados los dos programas, restaurar la ventana de PuTTY para configurar la máquina virtual.

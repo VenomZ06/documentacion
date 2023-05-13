@@ -1,0 +1,23 @@
+TTTTTTTTTTTTTTTTTTTTTTTTTT
+TT         T         TTTTT
+TTT  TTTT  TT  TTTT   TTTT
+TTT  TTTTTTTT  TTTT   TTTT
+TTT      TTTT       TTTTTT
+XXX  XXXXXXXX  XXX   XXXXX
+XXX  XXXX  XX  XXXX   XXXX
+XX         X    XXXX    XX
+XXXXXXXXXXXXXXXXXXXXXXXXXX
+
+### Lanzamiento de máquina virtual ###
+
+1. Ingresar a la consola de EC2 de Amazon entrando a la URL https://aws.amazon.com/
+2. Acceder a la consola en el botón naranja ubicado en la esquina superior derecha, iniciar sesión o crear una cuenta nueva según sea el caso.
+3. Desplegar el menú de servicios ubicado en la esquina superior izquierda, seleccionar todos los servicios, y en el listado desplegado bajar y seleccionar EC2.
+4. Pulsar el botón Lanzar la instancia y seleccionar la opción lanzar la instancia.
+5. Asignar un nombre a la máquina virtual, elegir el sistema operativo (en este caso Ubuntu Server 20.04 LTS), y seleccionar una arquitectura (64-bits x86). Para tener el servicio de EC2 de manera gratuita, dejar por defecto el tipo de instancia.
+6. Crear un par de llaves o seleccionarlo del listado según sea el caso.
+7. En configuraciones de red, crear un grupo de seguridad o seleccionarlo del listado según sea el caso, y seleccionar las opciones de permitir el tráfico de HTTP y HTTPS
+8. Dejar el resto de configuraciones por defecto y pulsar Lanzar Instancia.
+9. En el listado de opciones ubidado a la izquierda de la pantalla, seleccionar la opción panel de EC2, y en la página que se deslpoiega, pulsar la opción de Instancias (corriendo).
+10. En la página que se despliega marcar la instancia creada recientemente, y pulsar en el botón Conectar.
+11. En la nueva página que se despliega, aparece la dirección IP pública de la instancia y el nombre de usuario; ambos datos necesarios para conectar el cliente SSH.

@@ -1,0 +1,16 @@
+TTTTTTTTTTTTTTTTTTTTTTTTTT
+TT         T         TTTTT
+TTT  TTTT  TT  TTTT   TTTT
+TTT  TTTTTTTT  TTTT   TTTT
+TTT      TTTT       TTTTTT
+XXX  XXXXXXXX  XXX   XXXXX
+XXX  XXXX  XX  XXXX   XXXX
+XX         X    XXXX    XX
+XXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+## Reiniciar máquina virtual ##
+
+1. Abrir la consola de Amazon EC2 en https://console.aws.amazon.com/ec2/ y pulsar el enlace que dice Instancias.
+2. Marcar la instancia que se desea reiniciar, en la parte superior expandir el menú Estado de instancia, y pulsar la opción Reiniciar instancia.
+3. Pulsar el botón Reiniciar cuando se solicite confirmación.

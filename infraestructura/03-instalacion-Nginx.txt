@@ -1,0 +1,32 @@
+TTTTTTTTTTTTTTTTTTTTTTTTTT
+TT         T         TTTTT
+TTT  TTTT  TT  TTTT   TTTT
+TTT  TTTTTTTT  TTTT   TTTT
+TTT      TTTT       TTTTTT
+XXX  XXXXXXXX  XXX   XXXXX
+XXX  XXXX  XX  XXXX   XXXX
+XX         X    XXXX    XX
+XXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+### Actualización Paquetes SO ###
+
+1. Actualizar los paquetes del SO usando el comando: sudo apt-get update
+2. Mejorar los paquetes que se puedan mejorar con el comando: sudo apt-get upgrade
+
+## Instalación Servidor Nginx ##
+
+3. Instalar el servidor Nginx usando el comando: sudo apt-get install nginx
+4. Si el firewall ufw está corriendo, listar las aplicaciones registradas como servicio usando el comando: sudo ufw app list
+El proceso muestra una lista de perfiles disponibles para Nginx:
+ - Full: abre los puertos 80 de tráfico web sin cifrado y 443 de tráfico cifrado
+ - HTTP: abre únicamente el puerto 80
+ - HTTPS: abre únicamente el puerto 443
+se recomienda habilitar el perfil más restrictivo que permita el tráfico que se ha cconfigurado, para este caso sólo se va a permitir el tráfico en el puerto 80.
+5. Habilitar el perfil seleccionado mediante el comando: sudo ufw allow 'Nginx HTTP'
+  validar el cambio con el comando: sudo ufw status
+6. Se puede validar si el servicio está corroiendo mediante el comando: systemctl status nginx
+7. Una vez esté confirmado que el servicio está corriendo, ingresar en un navegador web el protocolo habilitado en el paso 4  seguido de la dirección IP de la máquina virtual.
+La IP es la misma a la que se conecta el cliente SSH. Si no está disponible, se puede usar el comando: ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+La URL entonces debería quedar similar a http://123.45.67.89, ir a la dirección y debe aparecer la página por defecto de Nginx.
+

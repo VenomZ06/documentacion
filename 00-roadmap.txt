@@ -1,0 +1,38 @@
+TTTTTTTTTTTTTTTTTTTTTTTTTT
+TT         T         TTTTT
+TTT  TTTT  TT  TTTT   TTTT
+TTT  TTTTTTTT  TTTT   TTTT
+TTT      TTTT       TTTTTT
+XXX  XXXXXXXX  XXX   XXXXX
+XXX  XXXX  XX  XXXX   XXXX
+XX         X    XXXX    XX
+XXXXXXXXXXXXXXXXXXXXXXXXXX
+
+PLAN DE TRABAJO
+
+- Infraestructura - OK
+  - Lanzamiento máquina virtual - OK
+  - Configuración SSH y SFTP - OK
+  - configuración máquina virtual
+    - Instalación Servidor Nginx - OK
+    - Instalación Servidor Mysql - OK
+    - Comunicar nginx con php - OK
+    - Cambiar permiso carpeta /html - OK
+    - Reiniciar máquina virtual - OK
+
+- Repositorio
+  - Crear cuenta GitHub.com - OK
+  - Instalar cliente de GitHub - OK
+  - Crear repositorio
+  - subir todo a GIT
+  - Perfil guapo en github
+
+- Subir videotutoriales
+- configurar pools -> revisar si mi pool está funcionando bien
+  - Documentación Pool
+- generar llave para la Mac
+  - Documentación llave
+- desarrollar pokedex api
+- desarrollar proyecto angular - react - php (idea buscaminas web)
+- desarrollar Portafolio para mostrar el proyecto
+- comprar dominio estebanrinconcorrea.com

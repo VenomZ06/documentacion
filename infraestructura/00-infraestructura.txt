@@ -1,0 +1,22 @@
+TTTTTTTTTTTTTTTTTTTTTTTTTT
+TT         T         TTTTT
+TTT  TTTT  TT  TTTT   TTTT
+TTT  TTTTTTTT  TTTT   TTTT
+TTT      TTTT       TTTTTT
+XXX  XXXXXXXX  XXX   XXXXX
+XXX  XXXX  XX  XXXX   XXXX
+XX         X    XXXX    XX
+XXXXXXXXXXXXXXXXXXXXXXXXXX
+
+#####   Infraestructura   #####
+Para el montaje de un portal web real, una de las primeras fases que se deben superar es el montaje de la infraestructura sobre la cual funcionan todos los componentes (o la mayoría) del sitio.
+
+Se optó por no tener infraestructura física, y optimizar costos contratando una infraestructura como servicio, reduciendo la inversión en hardware, mantenimiento, y ubicación física de un servidor, con todos sus costos asociados.
+
+Aunque hay diversos proveedores de infraestructura disponibles en la web, por la experiencia adquirida en proyectos anteriores, se optó por realizar todo el montaje del portal bajo el servicio EC2 de Amazon Web Services, y correr todo desde una máquina virtual alojada en este sitio.
+
+Para realizar la conexión a la máquina virtual, se utiliza el protocolo SSH, y como cliente se eligió el software libre PuTTY y para hacer transferencia directa de archivos se eligió WinSCP.
+
+Para infraeestructura se eligió un servidor LEMP (Linux-Nginx-MySQL-PHP) por su adaptabilidad a diferentes plataformas, además, Nginx posee un mejor desempeño y actualmente por su lugar en el mercado resulta una mayor ventaja saber configurar estos servidores.
+
+#posteriormente se configuró un segundo par de llaves para poder acceder mediante sistemas operativos Windows como otros como MacOS y Linux.
