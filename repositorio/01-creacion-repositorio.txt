@@ -18,7 +18,5 @@ XXXXXXXXXXXXXXXXXXXXXXXXXX
 6. Para crear una rama, expandir el segundo botón de la barra superior, y pulsar el botón "Nueva Rama", digitar un nombre para la rama, y pulsar el botón crear.
 7. Crear y editar los archivos necesarios y guardar los cambios.
 8. Ir al cliente de git, en el campo de resumen agregar una descripción corta de los cambios hechos, una descripción y pulsar el botón  commit
-
-para subir los cambios a esta rama al repositorio en GitHub, pulsar el tercer botón de la barra superior.
-
-abrir una solicitud de pull, para aceptar los cambios enviados en el commit, en el navegador pulsar el botón de abrir request, y pulsar nuevamente el botón del pull request; finalmente pulsar en combinar, y confirmar.
+9. Para subir los cambios a esta rama al repositorio en GitHub, pulsar el tercer botón de la barra superior.
+10. Abrir una solicitud de pull, para aceptar los cambios enviados en el commit, en el cliente de escritorio pulsar el botón de crear pull request, al ejecutarse el navegador pulsar nuevamente el botón del pull request; finalmente pulsar en combinar, y confirmar.
