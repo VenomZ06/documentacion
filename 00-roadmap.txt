@@ -23,8 +23,9 @@ PLAN DE TRABAJO
 - Repositorio
   - Crear cuenta GitHub.com - OK
   - Instalar cliente de GitHub - OK
-  - Crear repositorio
-  - subir todo a GIT
+  - Crear repositorio - OK
+  - subir todo a GIT - OK
+  - Instalar y configurar GitHub en la MAC
   - Perfil guapo en github
 
 - Subir videotutoriales
