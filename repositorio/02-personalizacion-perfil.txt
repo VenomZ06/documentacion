@@ -1,0 +1,19 @@
+TTTTTTTTTTTTTTTTTTTTTTTTTT
+TT         T         TTTTT
+TTT  TTTT  TT  TTTT   TTTT
+TTT  TTTTTTTT  TTTT   TTTT
+TTT      TTTT       TTTTTT
+XXX  XXXXXXXX  XXX   XXXXX
+XXX  XXXX  XX  XXXX   XXXX
+XX         X    XXXX    XX
+XXXXXXXXXXXXXXXXXXXXXXXXXX
+
+### Personalización de perfil GitHub ###
+
+un github readme profile es una caracterìstica de GitHub que nos permite utilizar texto en mardown y HTML dentro de un archivo readme en un repositorio especial
+
+1. Ir al sitio https://github.com/ y en el botón de + en la esquina superior derecha seleccionar nuevo repositorio
+2. En el nombre del repositorio digitar el mismo nombre del usuario de GitHub, incluyendo mayúsculas y minúsculas, al hacerlo correctamente la página muestra un recuadro en el que explica que es un repositorio especial donde es posible personalizar el perfil
+3. Seleccionar que el repositorio sea público, habilitar que contenga un archivo README.md y pulsar el botón de crear.
+4. Ir al perfil y pulsar el botón de editar, se habilita un editor de texto en el cuál es posible ingresar marcado HTML, sin embargo no admite directamente CSS ni la etiqueta script, por lo cual es necesario agregar el código utilizando atributos, y evitando el uso de JavaScript.
+5. Averiguar si soporta markdown y HTML en simultánea
