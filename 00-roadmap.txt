@@ -25,8 +25,8 @@ PLAN DE TRABAJO
   - Instalar cliente de GitHub - OK
   - Crear repositorio - OK
   - subir todo a GIT - OK
-  - Instalar y configurar GitHub en la MAC
-  - Perfil guapo en github
+  - Instalar y configurar GitHub en la MAC - OK
+  - Perfil en github - OK
 
 - Subir videotutoriales
 - configurar pools -> revisar si mi pool está funcionando bien
